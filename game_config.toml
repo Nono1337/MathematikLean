@@ -7,5 +7,5 @@ source_base_url = "https://raw.githubusercontent.com/mmasdeu/topologygame/main/"
 [[worlds]]
 name = "Set theory"
 id = 1
-levels = [ "src/set_theory_world/level*.lean" ]
+levels = [ "src/set_theory_world/level1.lean" ]
 
