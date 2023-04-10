@@ -1,4 +1,4 @@
-name = "Lean Topology game"
+name = "DHBW Lean Game"
 version = "1.1.0"
 extra_files = "extras"
 intro = "src/intro.lean"
