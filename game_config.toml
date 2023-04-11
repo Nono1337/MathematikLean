@@ -8,6 +8,6 @@ source_base_url = "https://raw.githubusercontent.com/mmasdeu/topologygame/main/"
 name = "dictionary"
 id = 1
 levels = [
-        "src/dictionary/level1.lean",
+        "src/dictionary/dictionary.lean",
 ]
 
