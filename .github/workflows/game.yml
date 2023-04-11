@@ -37,7 +37,6 @@ jobs:
         run: sudo apt install -y unzip make nodejs gettext build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
       - name: Install elan
         run: |
-          export NODE_OPTIONS=--openssl-legacy-provider
           set -o pipefail
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -v -y
           sudo ln -s $HOME/.elan/bin/* /usr/local/bin;
@@ -58,6 +57,7 @@ jobs:
           lean --json --make src | python scripts/detect_errors.py
       - name: Install Game maker
         run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
           git clone https://github.com/mpedramfar/Lean-game-maker.git
           cd Lean-game-maker/src/interactive_interface
           npm install .
