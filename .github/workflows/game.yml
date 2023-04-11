@@ -17,7 +17,7 @@ on:
         default: false
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -35,9 +35,9 @@ jobs:
           workflow: game.yml
       - name: Update packages
         run: sudo apt install -y unzip make nodejs gettext build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
- 
       - name: Install elan
         run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
           set -o pipefail
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -v -y
           sudo ln -s $HOME/.elan/bin/* /usr/local/bin;
