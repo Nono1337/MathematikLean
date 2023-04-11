@@ -7,5 +7,7 @@ source_base_url = "https://raw.githubusercontent.com/mmasdeu/topologygame/main/"
 [[worlds]]
 name = "dictionary"
 id = 1
-levels = [ "src/dictionary/dictionary.lean" ]
+levels = ["src/dictionary/dictionary.lean",
+          "src/dictionary/level1.lean"
+]
 
