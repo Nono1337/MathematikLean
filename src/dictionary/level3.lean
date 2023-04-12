@@ -1,4 +1,4 @@
-import dictionary.jection
+import basic_defs_world.jection
 
 /-
 # Level 3 : Injektivät und Surjektivität.
