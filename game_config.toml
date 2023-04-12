@@ -10,5 +10,7 @@ id = 1
 levels = [
         "src/dictionary/dictionary.lean",
         "src/dictionary/level1.lean",
+        "src/dictionary/level2.lean",
+        "src/dictionary/level3.lean",
 ]
 
