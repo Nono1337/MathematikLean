@@ -1,4 +1,4 @@
-import dictionary.jection --hide
+import basic_defs_world.jection --hide
 
 
 /-
