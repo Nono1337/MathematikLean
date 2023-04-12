@@ -9,5 +9,6 @@ name = "dictionary"
 id = 1
 levels = [
         "src/dictionary/dictionary.lean",
+        "src/dictionary/level1.lean",
 ]
 
