@@ -1,4 +1,4 @@
-import basic_defs_world.definition -- hide
+import basic_defs_world.jection -- hide
 
 
 
@@ -42,17 +42,6 @@ Der folgende Beweis benötigt nur eine Zeile Code.
 -/
 
 namespace jection -- hide
-
-def is_injective {X Y: Type*} (f : X → Y) --hide
-:= ∀ x : X, ∀ x' : X,
-f x = f x' → x = x'
-
-def is_surjective {X Y: Type*} (f : X → Y) --hide
-:= ∀ y : Y, ∃ x : X,
-f x = y
-
-def is_bijective {X Y: Type*} (f : X → Y) --hide
-:= is_injective f ∧ is_surjective f
 
 /- Hint : Falls Sie nicht weiterkommen, hier klicken für einen Hinweis.
 Zum Beweisen müssen wir uns einfach die Definition von Bijektivität anschauen und die Elimierungseigenschaft der Und-Klausel anwenden.
