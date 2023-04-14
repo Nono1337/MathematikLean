@@ -59,6 +59,9 @@ begin
   have ex_x : ∃ x : X, (g ∘ f) x = z := gf_surjective z,
   rcases ex_x with ⟨ x : X, gf_x_z⟩,
   -/
+  assume z : Z,
+  have ex_x : ∃ x : X, (g ∘ f) x = z := gf_surjective z,
+  rcases ex_x with ⟨ x : X, gf_x_z⟩,
   let y : Y := f x,
   use y,
 
