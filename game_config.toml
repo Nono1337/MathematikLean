@@ -9,8 +9,17 @@ name = "dictionary"
 id = 1
 levels = [
         "src/dictionary/dictionary.lean",
+]
+
+[[worlds]]
+name = "bijectivity"
+id = 2
+parents = [1]
+levels = [
         "src/dictionary/level1.lean",
         "src/dictionary/level2.lean",
         "src/dictionary/level3.lean",
+        "src/dictionary/level4.lean",
+        "src/dictionary/level5.lean",
 ]
 
