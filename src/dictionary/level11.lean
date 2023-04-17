@@ -1,21 +1,23 @@
-/- Tactic : assume
+/- Tactic : apply
 ## Summary
-introduces an identifer, as preparation for a proof of
-an all-statement or an implication
+tries to match the conclusion of the argument to the
+current goal; might create new goals
 -/
 
 
 /-
 # Simp
 
-	assume (: expr | <binders>)
+	apply expr
 
-	Assuming the target of the goal is a Pi or a let, assume h : t unifies the type of the binder
-	with t and introduces it with name h, just like intro h. If h is absent, the tactic uses the
-	name this. If T is omitted, it will be inferred.
+	The apply tactic tries to match the current goal against the conclusion of the type of term.
+	The argument term should be a term well-formed in the local context of the main goal.
+	If it succeeds, then the tactic returns as many subgoals as the number of premises that have
+	not been fixed by type inference or type class resolution. Non-dependent premises are added
+	before dependent ones.
 
-	assume (h₁ : t₁) ... (h`n` : t`n`) introduces multiple hypotheses. 
-	Any of the types may be omitted, but the names must be present.
+	The apply tactic uses higher-order pattern matching, type class resolution, and first-order
+	unification with dependent types.
 	
 -/
 

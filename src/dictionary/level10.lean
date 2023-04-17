@@ -1,14 +1,22 @@
-namespace jection
+/- Tactic : assume
+## Summary
+introduces an identifer, as preparation for a proof of
+an all-statement or an implication
+-/
 
-def is_injective {X Y: Type*} (f : X → Y)
-:= ∀ x : X, ∀ x' : X,
-f x = f x' → x = x'
 
-def is_surjective {X Y: Type*} (f : X → Y)
-:= ∀ y : Y, ∃ x : X,
-f x = y
+/-
+# Simp
 
-def is_bijective {X Y: Type*} (f : X → Y)
-:= is_injective f ∧ is_surjective f
+	assume (: expr | <binders>)
 
-end jection
+	Assuming the target of the goal is a Pi or a let, assume h : t unifies the type of the binder
+	with t and introduces it with name h, just like intro h. If h is absent, the tactic uses the
+	name this. If T is omitted, it will be inferred.
+
+	assume (h₁ : t₁) ... (h`n` : t`n`) introduces multiple hypotheses. 
+	Any of the types may be omitted, but the names must be present.
+	
+-/
+
+
